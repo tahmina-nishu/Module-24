@@ -1,14 +1,10 @@
-const uls = document.querySelectorAll('ul');
-for(const ul of uls)
+const unorderList = document.querySelectorAll('ul');
+for(const item of unorderList)
 {
-    ul.style.border = '2px solid steelblue';
-    ul.style.marginBottom = '90px';
-    ul.style.borderRadius = '10px';
-    ul.style.backgroundColor = 'skyblue';
-    ul.style.padding = '10px';
-    ul.style.textAlign = 'center';
-    ul.style.listStyle = 'none';
+    item.style.backgroundColor = 'skyblue';
+    item.style.border = '2px solid steelblue';
+    item.style.borderRadius = '10px';
+    item.style.padding = '10px';
+    item.style.listStyle = 'none';
+    item.style.textAlign = 'center';
 }
-
-const fruits = document.getElementById('fruits');
-fruits.classList.add('pine-apple');

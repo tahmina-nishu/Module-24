@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
-    <link rel="stylesheet" href="styles/style.css">
     <style>
         li{
             color: rgb(69, 42, 202);
         }
         .list{
             color:darkgreen;
+        }
+        h1{
+            color: rgb(57, 99, 136);
         }
     </style>
 </head>
@@ -26,50 +28,52 @@
             <li class="list">Bandarbaan</li>
         </ul>
         <h1 id="heading2 fruits-title">My Favourite fruits</h1>
-        <ul id="fruits">
+        <ul class="fruits">
             <li>mango</li>
             <li>lichi</li>
             <li>jackfruits</li>
         </ul>
     </main>
 
-    <script src="js/dom.js"></script>
-    <script>
-        const student = {
-            name: 'Abul',
-            ID: 11,
-            study: function (timr){
-                console.log(time, 'study kortece');
-            }
-        }
+<script src="js/style.js"></script>
 
-        console.log('adding js inside the html file');
-        const liCollection = document.getElementsByTagName('li');
-        console.log(liCollection);
+<script>
+    // ---- Change inner text by js ----
+    const newHeading = document.getElementById('heading');
+    newHeading.innerText = 'Changed heading by js';
+    
+    //nicher gulo sob console e show korbe, html er output e na..
 
-        for(const li of liCollection)
-        {
-            console.log(li);
-        }
 
-        const allHeadings = document.getElementsByTagName('h1');
-        for(const h1 of allHeadings)
-        {
-            console.log(h1);
-            console.log(h1.innerText);
-        }
+    // js er maddhome text add 
+    console.log('adding js inside the html file');
 
-        const places = document.getElementsByClassName('list');
+    //li gulo print korbe
+    const liCollection = document.getElementsByTagName('li');
+    console.log(liCollection);
+
+    for(const li of liCollection)
+    {
+        console.log(li);
+    }
+
+    // sobgulo h1 er html code r inner text dekhabe
+    const allHeadings = document.getElementsByTagName('h1');
+    for(const h1 of allHeadings)
+    {
+        console.log(h1);
+        console.log(h1.innerText);
+    }
+
+    // sobgulo list class er html code r inner text dekhabe
+    const places = document.getElementsByClassName('list');
         console.log(places);
         for(const place of places)
         {
             console.log(place.innerText);
         }
 
-        const hdng = document.getElementById('heading');
-        heading.innerText = ('Changed heading by js');
+</script>
 
-    </script>
-    <script src="js/style.js"></script>
 </body>
 </html>
