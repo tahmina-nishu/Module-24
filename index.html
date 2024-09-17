@@ -20,22 +20,20 @@
     <header>
         <h1>Welcome to my DOM</h1>
     </header>
-    <main>
-        <h1 id="heading">My favourite places</h1>
-        <ul>
+    <main id="main-container">
+        <h1 id="heading" class="place places">My favourite places</h1>
+        <ul id="container">
             <li class="list">Chattogram</li>
             <li class="list">Rangamati</li>
             <li class="list">Bandarbaan</li>
         </ul>
-        <h1 id="heading2 fruits-title">My Favourite fruits</h1>
+        <h1 id="heading2">My Favourite fruits</h1>
         <ul class="fruits">
             <li>mango</li>
             <li>lichi</li>
             <li>jackfruits</li>
         </ul>
     </main>
-
-<script src="js/style.js"></script>
 
 <script>
     // ---- Change inner text by js ----
@@ -73,7 +71,62 @@
             console.log(place.innerText);
         }
 
+    //ki ki style apply krchi
+    document.getElementById('heading').style // evabe likhe console e enter dile asbe
+
 </script>
+
+<script>
+    // get attribute --> er jonno first e ekta variable er moddhe rakhte hobe
+    const title = document.getElementById('heading');
+    console.log(title.getAttribute('id')); //heading e jei id ache ta print krbe
+    console.log(title.getAttribute('class'));  //heading er class gulo print korbe
+    console.log(title.classList);  //heading er classlist gulo array akare dibe
+
+    // add class
+    title.classList.add('newClass');
+    console.log(title.classList);
+
+    //remove class
+    title.classList.remove('place');
+    console.log(title.classList);  
+
+</script>
+
+<script>
+    //Childnode
+    const placesContainer = document.getElementById('container');
+    console.log(placesContainer);
+    console.log(placesContainer.childNodes);
+    console.log(placesContainer.childNodes[0]);  //0 index er child k dekhabe
+
+    //adding a paragrapg tag
+    const newElement = document.createElement('p');
+    console.log(newElement);
+
+    //adding a span tag
+    const newElement2 = document.createElement('span');
+    console.log(newElement2);
+
+    //adding a div tag
+    const newElement3 = document.createElement('div');
+    console.log(newElement3);
+
+    //adding a new list
+    const li = document.createElement('li');
+    li.innerText = 'new place';
+    console.log(li);
+
+    const placesUL = document.getElementById('container');
+    console.log(placesUL);
+    placesUL.appendChild(li);   //new list push korbe ul e
+    console.log(placesUL);
+
+    console.log(placesUL.parentNode);   //ul er parent node k dekhabe`
+</script>
+
+<script src="js/append.js"></script>
+<script src="js/style.js"></script>
 
 </body>
 </html>
